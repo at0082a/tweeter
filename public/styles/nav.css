@@ -1,0 +1,35 @@
+
+#nav-bar {
+
+overflow: hidden;
+height: 80px;
+position: fixed;
+background-color: #00a087;
+top : 0;
+width: 100%;
+padding-left: 2em;
+padding-right: 2em;
+
+}
+
+/* image within nav bar */
+#nav-bar .logo {    
+
+height: 80px;
+width: 80px;
+margin-right: 10px;
+float : left;
+position : relative
+
+}
+
+/* text beside image in nav bar ("Tweeter") */
+#nav-bar .header {
+
+color: white;
+float: left;
+font-size: 2em;
+top: 25%;
+position: relative;
+
+}
