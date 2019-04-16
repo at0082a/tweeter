@@ -19,11 +19,18 @@
     <!-- New Tweet CSS -->
     <link href="/styles/new-tweet.css" type="text/css" rel="stylesheet">
 
+    <!-- Individual Tweet CSS -->
+    <link href="/styles/tweet.css" type="text/css" rel="stylesheet">
+
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+
+    <!-- Char Counter JS -->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
   </head>
 
   <body>
@@ -44,9 +51,22 @@
                 <textarea class= "tweet-text" name="text" placeholder="What are you humming about?"></textarea>
                </div>
                 <input class="button" type="submit" value="Tweet">
-                <span class="counter">140</span>
+                <span id="counter">140</span>
             </form>
           </section>
+        <section class="tweet-container">
+          <article class="tweet">
+              <header>
+              <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="avatar">
+              <h3>Alex</h3>
+             </header>
+             <p class="body-text"> Hello world </p>
+             <footer>
+              <p class="footer-text">10 days ago</p>
+             </footer>
+          </article>
+        </section>
+
     </main>
    </div>
   </body>
