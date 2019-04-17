@@ -19,10 +19,17 @@
     border-radius : 4px 4px 0px 0px;
   }
 
+  header p {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin : 0;
+  }
+
   h3 {
     margin: 0;
-    padding-top: 4px;
-    vertical-align: middle
+    padding-top : 4px;
+    vertical-align : middle
   }
 
   .body-text {
@@ -56,4 +63,6 @@
    justify-content: flex-end;
    margin-right : 0.25rem;
   }
+
+
 

@@ -1,3 +1,5 @@
+
+
 /*
  * Client-side JS logic goes here
  * jQuery is already loaded
@@ -56,6 +58,7 @@ function createTweetElement (tweet) {
         <header>
             <img src="${tweet.user.avatars.small}" alt="Avatar" class="avatar"/>
             <h3>${tweet.user.name}</h3>
+            <p> ${tweet.user.handle} <p>
         </header>
         <p class="body-text">${tweet.content.text}</p>
         <footer>
@@ -63,6 +66,23 @@ function createTweetElement (tweet) {
         </footer>
     </article>`;
 }
+
+$(function() {
+    $( "#target" ).submit(function( event ) {
+         event.preventDefault();
+         var str = $( this ).serialize();
+         $.ajax({
+                  type: 'POST',
+                  url: "/tweets",
+                  data: str,
+                  success : function() {
+                      console.log('request succeeded')
+                  }
+                
+      });
+    });
+  });
+
 
 function renderTweets(tweets) {
     for (let tweet of tweets) {
