@@ -25,3 +25,17 @@ body {
   padding-top: 4em;
 }
 
+.nav-button {
+  background-color: grey;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 1em;
+  margin-right: 14em;
+  float: right;
+  font-size: 16px;
+  border-radius : 5%;
+}
+
