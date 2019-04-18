@@ -16,9 +16,16 @@ function escape(str) {
 function createTweetElement (tweet) {
    return `<article class="tweet">
         <header>
-            <img src="${tweet.user.avatars.small}" alt="Avatar" class="avatar"/>
-            <h3>${tweet.user.name}</h3>
-            <p> ${tweet.user.handle} <p>
+            <div style="flex-grow:1">
+                <img src="${tweet.user.avatars.small}" alt="Avatar" class="avatar"/>
+            </div>
+            <div style="flex-grow:6">
+                <h3>${tweet.user.name} </h3>
+            </div>
+            <div style="flex-grow:1">
+                <p>${tweet.user.handle}</p>
+            </div>
+            
         </header>
         <p class="body-text">${escape(tweet.content.text)}</p>
         <footer>
@@ -44,7 +51,7 @@ $(function() {
             $('#compose-tweet').text('Exceeds 140 Character Limit!').css('color', 'red')
             return
         } 
-         var str = $( this ).serialize();
+         var str = $( this ).serialize(); //post request to create tweet
          $.ajax({
                   type: 'POST',
                   url: "/tweets",
@@ -60,28 +67,29 @@ $(function() {
 
 function loadTweets () {
         
-    $.ajax({
+    $.ajax({ //get request to load tweets from the server
         type: 'GET',
         url: '/tweets',
         success: function(tweets) {
+            $('.tweet-container').empty();
             renderTweets(tweets);
         }
     });
     
 }
 
-function renderTweets(tweets) {
+function renderTweets(tweets) { //to add a new tweet at the top of the list
   for (let tweet of tweets) {
-        $('.tweet-container').prepend(createTweetElement(tweet));
+        $('.tweet-container').prepend(createTweetElement(tweet)); //prepend adds to top
     }
   }   
 
 $(document).ready(function() {
 
-$( ".new-tweet" ).hide()
+$( ".new-tweet" ).hide() //hides the compose tweet box when the page loads
 $(".nav-button").click(function(){
-    $(".new-tweet").toggle(500);
-    $( ".tweet-text" ).select();
+    $(".new-tweet").toggle(500); //makes the compose box visible
+    $( ".tweet-text" ).select(); //selects the text area to type when compose tweet slides into view
 });
 
 loadTweets();

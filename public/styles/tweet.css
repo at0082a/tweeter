@@ -3,11 +3,11 @@
     border-width: 1px;
     border-radius: 5px;
     width: 400px;
-    height: 120px;
+    height: 122px;
     margin: auto;
     margin-bottom: 2em;
     margin-top : 4em;
-    background-color: lightblue;
+    background-color: rgb(222, 224, 228);
     opacity: 0.7;
   }
 
@@ -15,34 +15,38 @@
     opacity: 1;
   }
   header{  
-    background-color : lightcoral;
+    background-color : lightgreen;
     height : 1.8rem;
     border-radius : 4px 4px 0px 0px;
+    display: flex;
+    flex-direction: row;
   }
 
   header p {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin : 0;
+    margin-top : 0.3rem;
+    vertical-align : middle;
+    color: purple;
   }
 
   h3 {
     margin: 0;
     padding-top : 4px;
-    vertical-align : middle
+    color : purple;
+    /* vertical-align : middle */
   }
 
   .body-text {
-    height: 2.25rem;
+    height: 2.5rem;
     margin-left : 0.25rem;
+    overflow-wrap: break-word;
+    font-size: 15px;
   }
 
   .avatar {
     float: left;
     vertical-align: middle;
     margin-right: 10px;
-    margin-left: 0.25rem;
+    margin-left: .5rem;
     margin-top: 2px;
     width: 25px;
     height: 25px;
@@ -50,10 +54,11 @@
   }
 
   footer {
-    background-color : lightcoral; 
+    background-color : lightgreen; 
     font-size : 0.8rem; 
     height: 1.3rem;
-    margin-bottom : 0;
+    color : purple;
+    /* margin-bottom : 0; */
     border-radius : 0px 0px 4px 4px;
   }
 
@@ -61,7 +66,8 @@
    display: flex;
    flex-direction: row;
    justify-content: flex-end;
-   margin-right : 0.25rem;
+   margin-right : 1rem;
+   padding-top: 4px;
   }
 
 

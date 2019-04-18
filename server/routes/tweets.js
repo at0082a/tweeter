@@ -1,7 +1,6 @@
 "use strict";
 
 const userHelper    = require("../lib/util/user-helper")
-
 const express       = require('express');
 const tweetsRoutes  = express.Router();
 
@@ -32,7 +31,9 @@ module.exports = function(DataHelpers) {
       created_at: Date.now()
     };
 
+    console.log("saving tweet")
     DataHelpers.saveTweet(tweet, (err) => {
+      console.log("err", err)
       if (err) {
         res.status(500).json({ error: err.message });
       } else {
