@@ -27,17 +27,23 @@ function createTweetElement (tweet) {
     </article>`;
 }
 
+
+
 $(function() {
-  
+
+    $('.tweet-text').keyup(function() {
+        $('#compose-tweet').text('Compose Tweet').css('color', 'purple');
+    })
+
     $( "#target" ).submit(function( event ) {
          event.preventDefault();
         if ( !$('.tweet-text').val()) {
-            alert('The text field can not be left blank');
+            $('#compose-tweet').text('Text Area Cannot Be Empty!').css('color', 'red')
             return
         } else if ($('.tweet-text').val().length > "140") {
-            alert('You cannot exceed 140 characters. Please reduce the size of your tweet')
+            $('#compose-tweet').text('Exceeds 140 Character Limit!').css('color', 'red')
             return
-    }
+        } 
          var str = $( this ).serialize();
          $.ajax({
                   type: 'POST',
