@@ -50,7 +50,9 @@ $(function() {
         } else if ($('.tweet-text').val().length > "140") {
             $('#compose-tweet').text('Exceeds 140 Character Limit!').css('color', 'red')
             return
-        } 
+        } else {
+            $('#counter').text("140")
+        }
          var str = $( this ).serialize(); //post request to create tweet
          $.ajax({
                   type: 'POST',
