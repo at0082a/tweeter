@@ -2,7 +2,8 @@
 
 const Chance = require("chance");
 const chance = new Chance();
-
+const MongoClient = require("mongodb").MongoClient;
+const MONGODB_URI = "mongodb://localhost:27017/Tweeter"
 const md5 = require('md5');
 
 module.exports = {

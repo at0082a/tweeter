@@ -24,6 +24,10 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
   const tweetsRoutes = require("./routes/tweets")(DataHelpers);
 
   app.use("/tweets", tweetsRoutes);
+
+  //create a usersRoutes akin to tweetsRoutes above
+  //then app.use like above
+
   // ==> We have a connection to the "test-tweets" db,
   //     starting here.
 });
