@@ -28,8 +28,12 @@ function createTweetElement (tweet) {
             
         </header>
         <p class="body-text">${escape(tweet.content.text)}</p>
-        <footer>
-            <p class="footer-text">${tweet.created_at}</p>
+        <footer class = "footer">
+            ${jQuery.timeago(tweet.created_at)}
+            <div class="icons"> <i class="fas fa-retweet"></i>
+            <i class="far fa-flag"></i>
+            <i class="far fa-heart"></i>
+            </div>
         </footer>
     </article>`;
 }

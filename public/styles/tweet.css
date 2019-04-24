@@ -37,7 +37,7 @@
 
   .body-text {
     height: 2.5rem;
-    margin-left : 0.25rem;
+    margin-left : 0.5rem;
     overflow-wrap: break-word;
     font-size: 15px;
   }
@@ -53,22 +53,28 @@
     border-radius: 50%;
   }
 
-  footer {
+  .footer {
     background-color : lightgreen; 
-    font-size : 0.8rem; 
+    font-size : 0.7rem; 
     height: 1.3rem;
     color : purple;
-    /* margin-bottom : 0; */
     border-radius : 0px 0px 4px 4px;
+    display : flex;
+    flex-direction : row;
+    padding-left: .5rem; 
+    padding-top: .25rem; 
   }
 
-  .footer-text {
-   display: flex;
-   flex-direction: row;
-   justify-content: flex-end;
-   margin-right : 1rem;
-   padding-top: 4px;
-  }
-
+  .icons { 
+    opacity: 0.2;
+    margin-left : 17.25rem;
+    float: right;
+    padding-top: 3px;
+    padding-right : 4px;   
+ }
+ 
+ .icons:hover {
+    opacity: 1;
+ }
 
 
