@@ -14,3 +14,6 @@ Tweeter is a simple, single-page Twitter clone.
 - Express
 - Node 5.10.x or above
 - MongoDB
+!['Screenshot of page with compose box'](https://github.com/at0082a/tweeter/blob/master/pics/Tweeter%20with%20Compose%20Tweet.png)
+
+!['Screenshot of page without compose box'](https://github.com/at0082a/tweeter/blob/master/pics/Tweeter%20without%20Toggle.png)
